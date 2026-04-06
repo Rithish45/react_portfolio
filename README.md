@@ -1,16 +1,38 @@
-# React + Vite
+# Engineering Portfolio Architecture
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This repository holds the high-performance, component-based React migration of the S.R. Rithish Barath portfolio. The project was fundamentally restructured from a standard HTML/CSS layout into a robust Vite React Application focused on render optimization, complex declarative animations, and modular architecture.
 
-Currently, two official plugins are available:
+## Architectural Upgrades
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+### 1. React Component Componentization
+- **Modular Ecosystem:** Replaced the legacy DOM-manipulation architecture with an isolated component tree (`App.jsx`, `Card.jsx`, `SpaceEngine.jsx`).
+- **Build Tooling:** Migrated entirely to the Vite bundler ecosystem to provide lightning-fast Hot Module Replacement (HMR) and an aggressively minified production bundle.
+- **Dependency Management:** Implemented structured dependency tracking (`package.json`) resolving missing SVG iconography dependencies with standard `lucide-react` scalable vectors.
 
-## React Compiler
+### 2. High-Performance Render Methodologies
+- **Ref-Based DOM Mutators:** Rebuilt the "Hardware Light Simulation" edge effect over the Titanium constraint cards. Instead of standard React state variables triggering consecutive tree re-renders per mouse coordinate change, we utilize `useRef` directly injecting CSS custom variables (`--mouse-x`) to force repaint at 60fps without touching React reconciliation logic. 
+- **Animation Loop Encapsulation:** Bound the 1500-node Space Engine canvas into a strict `useEffect` lifecycle with `requestAnimationFrame` boundaries and automatic memory cleanup vectors, preventing memory leak cascades on unmounts.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 3. Kinematic Viewport Engine
+- **Declarative Parallax:** Eradicated the standard CSS grid/flex box configurations representing projects and abstracted the flow into a heavy Parallax cinematic pipeline.
+- **Framer Motion Intercepts:** Relied purely on `IntersectionObserver` via Framer Motion's `useInView` and `useScroll` to trigger mathematical entry thresholds (`ease: [0.16, 1, 0.3, 1]`) matching industry-standard UX guidelines, eliminating costly scroll-event-listener loops. 
+- **Style Isolation:** Maintained rigorous Titanium/Matte Glass structural CSS (`index.css`) integrating radial `.bg-noise` without layout thrashing. 
 
-## Expanding the ESLint configuration
+## Local Development Initialization
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+To run the pipeline locally:
+```bash
+# Install package binaries
+npm install
+
+# Initialize development host server
+npm run dev
+```
+
+## Deployment Configuration
+Automated deploy scripts are anchored to GitHub Actions via the `gh-pages` branch. Executing the build/deploy configuration automatically pushes heavily minified transpiled JavaScript to the primary edge node layout.
+
+```bash
+# Deploys production bundle dynamically
+npm run deploy
+```
