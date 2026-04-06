@@ -1,7 +1,10 @@
 # State
 
-**Current Phase:** Cinematic Layout Refactor
-**Last Action:** Completely restructured the application from a rigid card grid into a massive, cinematic scrolling timeline. Expanded narrative copy to highlight Abyss Sovereign Engine, AURA, and Intelligence screener capabilities. Added deep Parallax sections, floating translucent hologram UI components, and native buttery-smooth behavior.
+**Current Phase:** Deployment & Version Control
+**Last Action:** Configured Git workspace credentials and successfully committed and pushed the entire cinematic React portfolio overhaul to the main branch on GitHub (`Rithish45/react_portfolio.git`). Also deployed the production build to GitHub Pages.
+
+## Live Application
+- **URL**: `https://Rithish45.github.io/react_portfolio`
 
 ## Pending Verification
 - Browser-based QA check on responsive behavior and edge lighting performance.
